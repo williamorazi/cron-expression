@@ -1,13 +1,9 @@
 <?php
 
-namespace Cron;
-
-use DateTime;
-
 /**
  * Month field.  Allows: * , / -
  */
-class MonthField extends AbstractField
+class Cron_MonthField extends Cron_AbstractField
 {
     public function isSatisfiedBy(DateTime $date, $value)
     {

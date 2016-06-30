@@ -1,11 +1,9 @@
 <?php
 
-namespace Cron;
-
 /**
  * Abstract CRON expression field
  */
-abstract class AbstractField implements FieldInterface
+abstract class Cron_AbstractField implements Cron_FieldInterface
 {
     /**
      * Check to see if a field is satisfied by a value

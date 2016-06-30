@@ -1,12 +1,9 @@
 <?php
 
-namespace Cron;
-use DateTime;
-
 /**
  * CRON field interface
  */
-interface FieldInterface
+interface Cron_FieldInterface
 {
     /**
      * Check if the respective value of a DateTime field satisfies a CRON exp

@@ -1,14 +1,10 @@
 <?php
 
-namespace Cron;
-
-use InvalidArgumentException;
-
 /**
  * CRON field factory implementing a flyweight factory
  * @link http://en.wikipedia.org/wiki/Cron
  */
-class FieldFactory
+class Cron_FieldFactory
 {
     /**
      * @var array Cache of instantiated fields

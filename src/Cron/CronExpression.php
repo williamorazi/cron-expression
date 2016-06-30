@@ -1,14 +1,5 @@
 <?php
 
-namespace Cron;
-
-use DateTime;
-use DateTimeImmutable;
-use DateTimeZone;
-use Exception;
-use InvalidArgumentException;
-use RuntimeException;
-
 /**
  * CRON expression parser that can determine whether or not a CRON expression is
  * due to run, the next run date and previous run date of a CRON expression.
@@ -21,7 +12,7 @@ use RuntimeException;
  *
  * @link http://en.wikipedia.org/wiki/Cron
  */
-class CronExpression
+class Cron_CronExpression
 {
     const MINUTE = 0;
     const HOUR = 1;

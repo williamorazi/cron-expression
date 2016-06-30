@@ -1,14 +1,9 @@
 <?php
 
-namespace Cron;
-
-use DateTime;
-
-
 /**
  * Minutes field.  Allows: * , / -
  */
-class MinutesField extends AbstractField
+class Cron_MinutesField extends Cron_AbstractField
 {
     public function isSatisfiedBy(DateTime $date, $value)
     {

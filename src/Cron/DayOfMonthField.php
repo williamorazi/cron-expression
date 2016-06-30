@@ -1,9 +1,5 @@
 <?php
 
-namespace Cron;
-
-use DateTime;
-
 /**
  * Day of month field.  Allows: * , / - ? L W
  *
@@ -22,7 +18,7 @@ use DateTime;
  *
  * @author Michael Dowling <mtdowling@gmail.com>
  */
-class DayOfMonthField extends AbstractField
+class Cron_DayOfMonthField extends Cron_AbstractField
 {
     /**
      * Get the nearest day of the week for a given day in a month
