@@ -24,11 +24,11 @@ class Cron_CronExpressionTest extends PHPUnit_Framework_TestCase
     {
         // '2010-09-10 12:00:00'
         $cron = Cron_CronExpression::factory('1 2-4 * 4,5,6 */3');
-        $this->assertEquals('1', $cron->getExpression(Cron_CronExpression::MINUTE));
-        $this->assertEquals('2-4', $cron->getExpression(Cron_CronExpression::HOUR));
-        $this->assertEquals('*', $cron->getExpression(Cron_CronExpression::DAY));
-        $this->assertEquals('4,5,6', $cron->getExpression(Cron_CronExpression::MONTH));
-        $this->assertEquals('*/3', $cron->getExpression(Cron_CronExpression::WEEKDAY));
+        $this->assertEquals('1', $cron->getExpression(Cron_CronExpression::$MINUTE));
+        $this->assertEquals('2-4', $cron->getExpression(Cron_CronExpression::$HOUR));
+        $this->assertEquals('*', $cron->getExpression(Cron_CronExpression::$DAY));
+        $this->assertEquals('4,5,6', $cron->getExpression(Cron_CronExpression::$MONTH));
+        $this->assertEquals('*/3', $cron->getExpression(Cron_CronExpression::$WEEKDAY));
         $this->assertEquals('1 2-4 * 4,5,6 */3', $cron->getExpression());
         $this->assertEquals('1 2-4 * 4,5,6 */3', (string) $cron);
         $this->assertNull($cron->getExpression('foo'));
@@ -48,12 +48,12 @@ class Cron_CronExpressionTest extends PHPUnit_Framework_TestCase
     public function testParsesCronScheduleWithAnySpaceCharsAsSeparators($schedule, array $expected)
     {
         $cron = Cron_CronExpression::factory($schedule);
-        $this->assertEquals($expected[0], $cron->getExpression(Cron_CronExpression::MINUTE));
-        $this->assertEquals($expected[1], $cron->getExpression(Cron_CronExpression::HOUR));
-        $this->assertEquals($expected[2], $cron->getExpression(Cron_CronExpression::DAY));
-        $this->assertEquals($expected[3], $cron->getExpression(Cron_CronExpression::MONTH));
-        $this->assertEquals($expected[4], $cron->getExpression(Cron_CronExpression::WEEKDAY));
-        $this->assertEquals($expected[5], $cron->getExpression(Cron_CronExpression::YEAR));
+        $this->assertEquals($expected[0], $cron->getExpression(Cron_CronExpression::$MINUTE));
+        $this->assertEquals($expected[1], $cron->getExpression(Cron_CronExpression::$HOUR));
+        $this->assertEquals($expected[2], $cron->getExpression(Cron_CronExpression::$DAY));
+        $this->assertEquals($expected[3], $cron->getExpression(Cron_CronExpression::$MONTH));
+        $this->assertEquals($expected[4], $cron->getExpression(Cron_CronExpression::$WEEKDAY));
+        $this->assertEquals($expected[5], $cron->getExpression(Cron_CronExpression::$YEAR));
     }
 
     /**
