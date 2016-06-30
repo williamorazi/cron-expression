@@ -14,12 +14,12 @@
  */
 class Cron_CronExpression
 {
-    const MINUTE = 0;
-    const HOUR = 1;
-    const DAY = 2;
-    const MONTH = 3;
-    const WEEKDAY = 4;
-    const YEAR = 5;
+    public static $MINUTE = 0;
+    public static $HOUR = 1;
+    public static $DAY = 2;
+    public static $MONTH = 3;
+    public static $WEEKDAY = 4;
+    public static $YEAR = 5;
 
     /**
      * @var array CRON expression parts
@@ -39,7 +39,7 @@ class Cron_CronExpression
     /**
      * @var array Order in which to test of cron parts
      */
-    private static $order = array(self::YEAR, self::MONTH, self::DAY, self::WEEKDAY, self::HOUR, self::MINUTE);
+    private static $order = array(self::$YEAR, self::$MONTH, self::$DAY, self::$WEEKDAY, self::$HOUR, self::$MINUTE);
 
     /**
      * Factory method to create a new Cron_CronExpression.
