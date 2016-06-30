@@ -27,12 +27,12 @@ class Cron_DayOfMonthField extends Cron_AbstractField
      * @param int $currentMonth Current month
      * @param int $targetDay    Target day of the month
      *
-     * @return \DateTime Returns the nearest date
+     * @return DateTime Returns the nearest date
      */
     private static function getNearestWeekday($currentYear, $currentMonth, $targetDay)
     {
         $tday = str_pad($targetDay, 2, '0', STR_PAD_LEFT);
-        $target = DateTime::createFromFormat('Y-m-d', "$currentYear-$currentMonth-$tday");
+        $target = new DateTime(sprintf('%s-%02d-%02d', $currentYear, $currentMonth, $targetDay));
         $currentWeekday = (int) $target->format('N');
 
         if ($currentWeekday < 6) {

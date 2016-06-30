@@ -22,7 +22,7 @@ interface Cron_FieldInterface
      * @param DateTime $date   DateTime object to change
      * @param bool     $invert (optional) Set to TRUE to decrement
      *
-     * @return FieldInterface
+     * @return Cron_FieldInterface
      */
     public function increment(DateTime $date, $invert = false);
 

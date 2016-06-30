@@ -16,7 +16,7 @@ class Cron_FieldFactory
      *
      * @param int $position CRON expression position value to retrieve
      *
-     * @return FieldInterface
+     * @return Cron_FieldInterface
      * @throws InvalidArgumentException if a position is not valid
      */
     public function getField($position)
@@ -24,22 +24,22 @@ class Cron_FieldFactory
         if (!isset($this->fields[$position])) {
             switch ($position) {
                 case 0:
-                    $this->fields[$position] = new MinutesField();
+                    $this->fields[$position] = new Cron_MinutesField();
                     break;
                 case 1:
-                    $this->fields[$position] = new HoursField();
+                    $this->fields[$position] = new Cron_HoursField();
                     break;
                 case 2:
-                    $this->fields[$position] = new DayOfMonthField();
+                    $this->fields[$position] = new Cron_DayOfMonthField();
                     break;
                 case 3:
-                    $this->fields[$position] = new MonthField();
+                    $this->fields[$position] = new Cron_MonthField();
                     break;
                 case 4:
-                    $this->fields[$position] = new DayOfWeekField();
+                    $this->fields[$position] = new Cron_DayOfWeekField();
                     break;
                 case 5:
-                    $this->fields[$position] = new YearField();
+                    $this->fields[$position] = new Cron_YearField();
                     break;
                 default:
                     throw new InvalidArgumentException(
