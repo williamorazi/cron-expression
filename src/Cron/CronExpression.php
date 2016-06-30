@@ -39,7 +39,7 @@ class Cron_CronExpression
     /**
      * @var array Order in which to test of cron parts
      */
-    private static $order = array(self::$YEAR, self::$MONTH, self::$DAY, self::$WEEKDAY, self::$HOUR, self::$MINUTE);
+    private static $order = array(5, 3, 2, 4, 1, 0);
 
     /**
      * Factory method to create a new Cron_CronExpression.
