@@ -1,16 +1,22 @@
 {
-    "name": "mtdowling/cron-expression",
+    "name": "williamorazi/cron-expression",
     "type": "library",
     "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
     "keywords": ["cron", "schedule"],
     "license": "MIT",
-    "authors": [{
-        "name": "Michael Dowling",
-        "email": "mtdowling@gmail.com",
-        "homepage": "https://github.com/mtdowling"
+    "authors": [
+    {
+        "name"     : "William Orazi",
+        "email"    : "williamorazi@gmail.com",
+        "homepage" : "https://github.com/williamorazi"
+    },
+    {
+        "name"     : "Michael Dowling",
+        "email"    : "mtdowling@gmail.com",
+        "homepage" : "https://github.com/mtdowling"
     }],
     "require": {
-        "php": ">=5.3.2"
+        "php": ">=5.2.17"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0|~5.0"

@@ -1,7 +1,5 @@
-PHP Cron Expression Parser
-==========================
-
-[![Latest Stable Version](https://poser.pugx.org/mtdowling/cron-expression/v/stable.png)](https://packagist.org/packages/mtdowling/cron-expression) [![Total Downloads](https://poser.pugx.org/mtdowling/cron-expression/downloads.png)](https://packagist.org/packages/mtdowling/cron-expression) [![Build Status](https://secure.travis-ci.org/mtdowling/cron-expression.png)](http://travis-ci.org/mtdowling/cron-expression)
+PHP Cron Expression Parser for PHP 5.2.17
+=========================================
 
 The PHP cron expression parser can parse a CRON expression, determine if it is
 due to run, calculate the next run date of the expression, and calculate the previous
@@ -19,7 +17,7 @@ Installing
 Add the dependency to your project:
 
 ```bash
-composer require mtdowling/cron-expression
+composer require williamorazi/cron-expression
 ```
 
 Usage
@@ -66,6 +64,6 @@ A CRON expression is a string representing the schedule for a particular command
 Requirements
 ============
 
-- PHP 5.3+
+- PHP 5.2.17+
 - PHPUnit is required to run the unit tests
 - Composer is required to run the unit tests
